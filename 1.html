@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pattern_1</title>
+</head>
+<body>
+
+<script src='http://cykod.github.io/Logoish/logoish.js'></script>
+<script>
+Logoish.init();
+
+speed(0);
+
+function star(size) {
+  angle(90);
+  forward(size);
+  rotate(144);
+  forward(size);
+  rotate(144);
+  forward(size);
+  rotate(144);
+  forward(size);
+  rotate(144);
+  forward(size);
+  rotate(144);
+
+
+}
+
+function getRandomRGB() {
+var rgb = [Math.floor(Math.random()*255), 0, Math.floor(Math.random()*255)];
+return "rgb(" + rgb.join(",") + ")";
+}
+
+
+
+for(var y = 1; y < 90; y+=3) {
+  for(var x = 1; x < 90; x+=3) {
+    moveTo(x * 12, y * 12);
+    star(30);
+
+  
+  }
+
+  var color = getRandomRGB() ;
+  lineColor(color);
+  
+
+}
+
+</script>
+</body></html>
